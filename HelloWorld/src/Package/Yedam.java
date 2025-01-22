@@ -10,6 +10,7 @@ public class Yedam {
 		System.out.println();
 		}
 		System.out.println("end of prog");
+		
 	}
 
 }
