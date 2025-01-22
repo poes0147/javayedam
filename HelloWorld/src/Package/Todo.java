@@ -7,7 +7,7 @@ public class Todo {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		System.out.println("임의의 문자를 입력");
-		int bank = 0;
+		int bank = 0;//계좌
 		// while을 써서 
 //		String num = scn.nextLine();
 		while(true) { //은행입금프로그램. 계죄는 하나만 있다.
@@ -24,17 +24,26 @@ public class Todo {
 				System.out.print("금액을 입력해 주세요");
 				money = Integer.parseInt(scn.nextLine());
 			    bank += money;
+				System.out.print("입금이 완료되었습니다.");
+				scn.nextLine();
 				
 			}else if (num == 2) {//2.출금
 				System.out.print("금액을 입력해 주세요");
 				money = Integer.parseInt(scn.nextLine());
-				bank -= money;
-				
+				if(bank >= money) {
+					bank -= money;
+					System.out.print("출금이 완료되었습니다.");
+				} else {
+					System.out.println("잔액이 부족합니다.");
+				}
+				scn.nextLine();
+
 			}else if (num == 3) {//3.잔액조회
 				System.out.printf("###잔액은 %d 입니다.###\n", bank);
-
+				scn.nextLine();
 				
 			}else if (num == 4) {//4종료
+				System.out.printf("종료되었습니다.");
 				break;
 			}
 		}
