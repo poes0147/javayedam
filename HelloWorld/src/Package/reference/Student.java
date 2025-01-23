@@ -10,12 +10,12 @@ public class Student { // 학생의 정보를 입력하기 위핸 클래스
 		
 	}
 	
-	Student(String studentName, int engScore) {//
+	Student(String studentName, int engScore) {
 		this.studentName = studentName;
 		this.engScore = engScore; 
 	}
 	
-	Student(String studentName, int engScore, int mathScore) {//
+	Student(String studentName, int engScore, int mathScore) {
 		this.studentName = studentName;
 		this.engScore = engScore; 
 		this.mathScore = mathScore;
